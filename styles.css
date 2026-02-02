@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+/* Header / brand layout */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 10px 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.app-header .brand {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center brand in remaining space */
+    gap: 10px;
+    white-space: nowrap;
+}
+.app-header .brand h1 { margin: 0; font-size: 26px; text-align: center; max-width: calc(100vw - 120px); text-overflow: ellipsis; }
+.logo { display:block; border-radius:6px; }
+.header-actions {
+    flex: 0 0 auto;
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+@media (max-width:420px) {
+    .app-header { padding: 10px 6px; }
+    .app-header .brand h1 { font-size: 16px; }
+    #theme-toggle { padding: 6px 8px; font-size: 14px; }
+}
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input, button {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+button:hover {
+    background-color: #45a049;
+}
+.dashboard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.challenge {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.challenge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.progress-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    gap: 5px;
+    margin-top: 10px;
+}
+.day-checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.day-checkbox input {
+    margin-bottom: 2px;
+}
+.day-checkbox label {
+    font-size: 10px;
+}
+.completed {
+    background-color: #4CAF50;
+    color: white;
+}
+.incomplete {
+    background-color: #f44336;
+    color: white;
+}
+.future {
+    background-color: #ccc;
+}
+.past {
+    background-color: #2196F3;
+    color: white;
+}
+.today {
+    background-color: #FF9800;
+    color: white;
+}
+.summary {
+    background-color: #e8f5e8;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.install-prompt {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: none;
+}
+.install-prompt button {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* Theme toggle button (placed inside header) */
+#theme-toggle {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #4CAF50;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #181818;
+    color: #e0e0e0;
+}
+body.dark-mode h1 {
+    color: #ffffff;
+}
+body.dark-mode .form-container,
+body.dark-mode .dashboard,
+body.dark-mode .challenge {
+    background-color: #1e1e1e;
+    box-shadow: none;
+    border: 1px solid #2a2a2a;
+}
+body.dark-mode .summary {
+    background-color: #2b2b2b;
+    box-shadow: none;
+    border: 1px solid #2a2a2a;
+}
+body.dark-mode .future {
+    background-color: #434343;
+}
+body.dark-mode input,
+body.dark-mode button {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+    border: 1px solid #3a3a3a;
+}
+body.dark-mode .progress-bar {
+    background-color: #2b2b2b;
+}
+body.dark-mode .progress-fill {
+    background-color: #64dd17;
+}
+body.dark-mode #theme-toggle {
+    background: #2b2b2b;
+    color: #fff;
+    border: 1px solid #3a3a3a;
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Daily Task Challenge Tracker",
+    "short_name": "Task Tracker",
+    "description": "Track your daily challenges and progress",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#f5f5f5",
+    "theme_color": "#4CAF50",
+    "icons": [
+        {
+            "src": "/Habit-Tracker/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/Habit-Tracker/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
